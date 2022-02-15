@@ -1,8 +1,6 @@
 var encrypt = document.querySelector("#btn-encriptar")
 var message = document.querySelector("#input-texto")
 var capturedMessage = capturarMensaje(message);
-var comparedMessage = compararMensaje();
-
 encrypt.addEventListener("click", function(event){
     event.preventDefault();
     console.log("you have clicked the button")
@@ -12,24 +10,35 @@ encrypt.addEventListener("click", function(event){
 
 function capturarMensaje(message) {
     message.addEventListener("input", function(){
-        var input = this.value;
-        console.log(input);       
+        input = this.value
+        console.log(this.value);        
+
+    for(var i = 0; this.value.length; i++ )
+
+        if (this.value[i] == "a") {
+            
+            console.log("ai")
+            return;             
+
+        }   
               
-     });
+              
+    });
     
+    
+
 }
 
 
-
-
- function compararMensaje() {
-     if (message.textContent == "a") {
-         alert("ai")
-
+ /*function compararMensaje() {
+    
      }
 
 
 }
+
+var comparedMessage = compararMensaje(); */
+
 /*
 
 
