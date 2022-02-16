@@ -1,6 +1,6 @@
 var encrypt = document.querySelector("#btn-encriptar")
 var message = document.querySelector("#input-texto")
-var capturedMessage = capturarMensaje(message);
+var capturedMessage = capturarMensaje(message); 
 encrypt.addEventListener("click", function(event){
     event.preventDefault();
     console.log("you have clicked the button")
@@ -8,22 +8,30 @@ encrypt.addEventListener("click", function(event){
 
 });
 
+
 function capturarMensaje(message) {
     message.addEventListener("input", function(){
-        input = this.value
-        console.log(this.value);        
+        console.log(this.value);
+        var output = ["ai"]   
+        
+               
 
-    for(var i = 0; this.value.length; i++ )
-
-        if (this.value[i] == "a") {
+    for(var i = 0; this.value.length; i++ ) {
+        
+        if ((this.value[i] == "a") && (output[i] == "ai")) {
             
-            console.log("ai")
-            return;             
-
-        }   
-              
-              
-    });
+            output.push("ai")
+            console.log(output);
+            return;          
+            
+        }
+        console.log(output)
+        
+      
+    }         
+            
+        
+});
     
     
 
