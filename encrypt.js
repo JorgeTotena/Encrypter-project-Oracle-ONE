@@ -1,4 +1,7 @@
-var encrypt = document.querySelector("#btn-encriptar")
+
+
+
+/*var encrypt = document.querySelector("#btn-encriptar")
 var message = document.querySelector("#input-texto")
 var capturedMessage = capturarMensaje(message); 
 encrypt.addEventListener("click", function(event){
@@ -35,7 +38,7 @@ function capturarMensaje(message) {
     
     
 
-}
+} */
 
 
  /*function compararMensaje() {
