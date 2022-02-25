@@ -1,15 +1,27 @@
 
 
 
-/*var encrypt = document.querySelector("#btn-encriptar")
-var message = document.querySelector("#input-texto")
-var capturedMessage = capturarMensaje(message); 
+var encrypt = document.querySelector("#btn-encriptar");
+var decrypt = document.querySelector("#btn-desencriptar");
+var message = document.querySelector("#input-texto");
+var encryptedMessage = document.querySelector("#msg"); 
+var copybutton = document.querySelector("#btn-copy")
+/*var capturedMessage = capturarMensaje(message); */
+
 encrypt.addEventListener("click", function(event){
-    event.preventDefault();
-    console.log("you have clicked the button")
+    var encryption = encryptMsg(message.value);
+    event.preventDefault(); 
+    console.log(encryption)
+    encryptedMessage.value = encryption
         
 
 });
+
+function encryptMsg(text) {
+    var output = text.replaceAll("e", "enter")
+    return output;
+
+}
 
 
 function capturarMensaje(message) {
@@ -19,7 +31,7 @@ function capturarMensaje(message) {
         
                
 
-    for(var i = 0; this.value.length; i++ ) {
+    /*for(var i = 0; this.value.length; i++ ) {
         
         if ((this.value[i] == "a") && (output[i] == "ai")) {
             
@@ -28,29 +40,18 @@ function capturarMensaje(message) {
             return;          
             
         }
-        console.log(output)
+        console.log(output) */
         
       
-    }         
-            
+                   
         
 });
     
     
 
-} */
-
-
- /*function compararMensaje() {
-    
-     }
-
-
 }
 
-var comparedMessage = compararMensaje(); */
 
-/*
 
 
 /* Reglas de encriptación: 
