@@ -24,10 +24,7 @@ function encryptMsg(text) {
 }
 
 
-function capturarMensaje(message) {
-    message.addEventListener("input", function(){
-        console.log(this.value);
-        var output = ["ai"]   
+
         
                
 
