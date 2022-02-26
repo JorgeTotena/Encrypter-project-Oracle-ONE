@@ -12,41 +12,42 @@ encrypt.addEventListener("click", function(event){
     var encryption = encryptMsg(message.value);
     event.preventDefault(); 
     console.log(encryption)
-    encryptedMessage.value = encryption
+    encryptedMessage.value = encryption;
         
 
 });
 
 function encryptMsg(text) {
     var output = text.replaceAll("e", "enter")
+    output = output.replaceAll("i", "imes")
+    output = output.replaceAll("a", "ai")
+    output = output.replaceAll("o", "ober")
+    output = output.replaceAll("u", "ufat")
+    
     return output;
 
 }
 
+decrypt.addEventListener("click", function(event){
+    var decryption = decryptMsg(message.value);
+    console.log(decryption);
+    event.preventDefault(); 
+    encryptedMessage.value = decryption;
 
+})
 
-        
-               
+function decryptMsg(text) {
+    var input = text.replaceAll("enter", "e")
+    return input;
 
-    /*for(var i = 0; this.value.length; i++ ) {
-        
-        if ((this.value[i] == "a") && (output[i] == "ai")) {
-            
-            output.push("ai")
-            console.log(output);
-            return;          
-            
-        }
-        console.log(output) */
-        
+}
+    
       
                    
         
-});
-    
+
     
 
-}
 
 
 
