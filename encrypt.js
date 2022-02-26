@@ -18,11 +18,11 @@ encrypt.addEventListener("click", function(event){
 });
 
 function encryptMsg(text) {
-    var output = text.replaceAll("e", "enter")
-    output = output.replaceAll("i", "imes")
-    output = output.replaceAll("a", "ai")
-    output = output.replaceAll("o", "ober")
-    output = output.replaceAll("u", "ufat")
+    var output = text.replaceAll("e", "enter");
+    output = output.replaceAll("i", "imes");
+    output = output.replaceAll("a", "ai");
+    output = output.replaceAll("o", "ober");
+    output = output.replaceAll("u", "ufat");
     
     return output;
 
@@ -37,10 +37,20 @@ decrypt.addEventListener("click", function(event){
 })
 
 function decryptMsg(text) {
-    var input = text.replaceAll("enter", "e")
+    var input = text.replaceAll("enter", "e");
+    input = input.replaceAll("imes", "i");
+    input = input.replaceAll("ai", "a");
+    input = input.replaceAll("ober", "o");
+    input = input.replaceAll("ufat", "u");
     return input;
 
 }
+
+copybutton.addEventListener("click", function(event){ /* esta funcion permite copiar lo que se encuentra en el clipboard */
+    navigator.clipboard.writeText(encryptedMessage.value);
+    event.preventDefault();
+    
+})
     
       
                    
