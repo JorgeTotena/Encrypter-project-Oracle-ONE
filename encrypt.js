@@ -18,11 +18,11 @@ encrypt.addEventListener("click", function(event){
 });
 
 function encryptMsg(text) {
-    var output = text.replaceAll(/e/gi, "enter"); /* /e/gi me devuelve una expresion regular insensitive y global que me permite ignorar el case */
-    output = output.replaceAll(/i/gi, "imes");
-    output = output.replaceAll(/a/gi, "ai");
-    output = output.replaceAll(/o/gi, "ober");
-    output = output.replaceAll(/u/gi, "ufat");
+    var output = text.replaceAll(/[eé]/gi, "enter"); /* /e/gi me devuelve una expresion regular insensitive y global que me permite ignorar el case */
+    output = output.replaceAll(/[ií]/gi, "imes");
+    output = output.replaceAll(/[aá]/gi, "ai");
+    output = output.replaceAll(/[oó]/gi, "ober");
+    output = output.replaceAll(/[uú]/gi, "ufat");
     
     return output;
 
